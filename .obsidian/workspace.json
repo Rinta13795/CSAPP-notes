@@ -1,0 +1,205 @@
+{
+  "main": {
+    "id": "91755f44903440f1",
+    "type": "split",
+    "children": [
+      {
+        "id": "916feb74f67815ad",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7e8e3c16d84b87e2",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "97aa2e2fbc7473b7",
+    "type": "split",
+    "children": [
+      {
+        "id": "4657c59728a8c179",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "610f5d7a1f6caf47",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "f4d5af1ccb92b04c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "94adf14b42ef3898",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 221.5
+  },
+  "right": {
+    "id": "dbbb8024c4b09354",
+    "type": "split",
+    "children": [
+      {
+        "id": "ad26be5ada683358",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1103bb875ec7c788",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "CSAPP.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "CSAPP 的反向链接列表"
+            }
+          },
+          {
+            "id": "1a02fd3db3f1ef2d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "CSAPP.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "CSAPP 的出链列表"
+            }
+          },
+          {
+            "id": "974c15ec6f1ee945",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "ceecdb031f6d4fcb",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "13259ea47399f73e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "CSAPP.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "CSAPP 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false
+    }
+  },
+  "active": "7e8e3c16d84b87e2",
+  "lastOpenFiles": [
+    "Pasted image 20260212215521.png.md",
+    "CSAPP.md",
+    "未命名.base",
+    "未命名 6.base",
+    "未命名.canvas",
+    "Markdown.md",
+    "未命名 1.base",
+    "2026-02-14.md",
+    "未命名 5.base",
+    "Pasted image 20260212210827.png",
+    "Pasted image 20260212204333.png",
+    "2026-02-11.md",
+    "未命名 4.base",
+    "未命名 3.base",
+    "未命名 2.base",
+    "Pasted image 20260212215521.png",
+    "Pasted image 20260212215501.png",
+    "Pasted image 20260212215440.png",
+    "Pasted image 20260212210855.png"
+  ]
+}

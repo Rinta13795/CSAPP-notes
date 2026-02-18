@@ -11,13 +11,42 @@
             "id": "7e8e3c16d84b87e2",
             "type": "leaf",
             "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2026-02-15.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-02-15"
+            }
+          },
+          {
+            "id": "f55ed5fc454246e7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CSAPP-note2.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CSAPP-note2"
+            }
+          },
+          {
+            "id": "ddb3dfa2ca2d7411",
+            "type": "leaf",
+            "state": {
               "type": "empty",
               "state": {},
               "icon": "lucide-file",
               "title": "新标签页"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -180,26 +209,34 @@
       "bases:新建数据库": false
     }
   },
-  "active": "7e8e3c16d84b87e2",
+  "active": "f55ed5fc454246e7",
   "lastOpenFiles": [
+    "Pasted image 20260218224414.png",
+    "Pasted image 20260218224259.png",
+    "Pasted image 20260218221752.png",
+    "Pasted image 20260218221029.png",
+    "Pasted image 20260218215825.png",
+    "Pasted image 20260218214622.png",
+    "Pasted image 20260218214543.png",
+    "Pasted image 20260218214211.png",
+    "Pasted image 20260218213853.png",
+    "Pasted image 20260218213223.png",
+    "Pasted image 20260218213122.png",
+    "CSAPP-note2.md",
+    "2026-02-15.md",
+    "未命名 1.canvas",
+    "未命名.canvas",
     "Pasted image 20260212215521.png.md",
     "CSAPP.md",
     "未命名.base",
     "未命名 6.base",
-    "未命名.canvas",
     "Markdown.md",
     "未命名 1.base",
     "2026-02-14.md",
     "未命名 5.base",
-    "Pasted image 20260212210827.png",
-    "Pasted image 20260212204333.png",
     "2026-02-11.md",
     "未命名 4.base",
     "未命名 3.base",
-    "未命名 2.base",
-    "Pasted image 20260212215521.png",
-    "Pasted image 20260212215501.png",
-    "Pasted image 20260212215440.png",
-    "Pasted image 20260212210855.png"
+    "未命名 2.base"
   ]
 }

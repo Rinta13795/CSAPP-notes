@@ -27,12 +27,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CSAPP-note2.md",
+                "file": "2026-02-20.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CSAPP-note2"
+              "title": "2026-02-20"
+            }
+          },
+          {
+            "id": "00a171e98cd88a1b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "images.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "images"
             }
           },
           {
@@ -46,7 +60,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -209,8 +223,15 @@
       "bases:新建数据库": false
     }
   },
-  "active": "f55ed5fc454246e7",
+  "active": "00a171e98cd88a1b",
   "lastOpenFiles": [
+    "Pasted image 20260219225608.png",
+    "images.md",
+    "CSAPP-note2.md",
+    "2026-02-20.md",
+    "未命名 4.canvas",
+    "未命名 3.canvas",
+    "未命名 2.canvas",
     "Pasted image 20260218224414.png",
     "Pasted image 20260218224259.png",
     "Pasted image 20260218221752.png",
@@ -220,9 +241,6 @@
     "Pasted image 20260218214543.png",
     "Pasted image 20260218214211.png",
     "Pasted image 20260218213853.png",
-    "Pasted image 20260218213223.png",
-    "Pasted image 20260218213122.png",
-    "CSAPP-note2.md",
     "2026-02-15.md",
     "未命名 1.canvas",
     "未命名.canvas",

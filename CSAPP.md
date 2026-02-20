@@ -3,7 +3,7 @@
 首先程序代码输入到输出的过程一共要经历2个阶段：编译和运行
 ### 1.编译：
 源代码是无法被系统直接执行的，因为计算机只能看懂二进制文件，为此我们首先需要将源程序代码通过编译转化成可被系统执行的目标程序的二进制文件。
-![[Pasted image 20260212210855.png]]
+![Pasted image 20260212210855.png](images/Pasted image 20260212210855.png)
 我们的编译分成4步：
 1.预处理
 读取并修改系统头文件内容
@@ -21,9 +21,9 @@
 1系统是不是只能执行二进制文件，机械代码是？
 ### 2.运行：
 
-![[Pasted image 20260212215521.png]]
-![[Pasted image 20260212215440.png]]
-![[Pasted image 20260212215501.png]]
+![Pasted image 20260212215521.png](images/Pasted image 20260212215521.png)
+![Pasted image 20260212215440.png](images/Pasted image 20260212215440.png)
+![Pasted image 20260212215501.png](images/Pasted image 20260212215501.png)
 
 
 ## 存储器的层次

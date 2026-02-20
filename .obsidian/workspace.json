@@ -11,28 +11,34 @@
             "id": "7e8e3c16d84b87e2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "2026-02-15.md",
-                "mode": "source",
-                "source": false
+                "file": "未命名 1.canvas",
+                "viewState": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 0
+                }
               },
-              "icon": "lucide-file",
-              "title": "2026-02-15"
+              "icon": "lucide-layout-dashboard",
+              "title": "未命名 1"
             }
           },
           {
             "id": "f55ed5fc454246e7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "2026-02-20.md",
-                "mode": "source",
-                "source": false
+                "file": "未命名 4.canvas",
+                "viewState": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 0
+                }
               },
-              "icon": "lucide-file",
-              "title": "2026-02-20"
+              "icon": "lucide-layout-dashboard",
+              "title": "未命名 4"
             }
           },
           {

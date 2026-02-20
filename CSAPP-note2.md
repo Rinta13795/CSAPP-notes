@@ -28,7 +28,7 @@ B2T是一个函数，转化二进制（补码编码）成有符号整数
 
 唯一性：一个二进制编码对应一个有符号整数或无符号整数
 2.
-![[Pasted image 20260218210815.png]
+![Pasted image 20260218210815.png](images/Pasted image 20260218210815.png)
 ![Pasted image 20260218210556.png](images/Pasted image 20260218210556.png)
 UMax表示无符号数最大值
 TMax表示有符号数最大值

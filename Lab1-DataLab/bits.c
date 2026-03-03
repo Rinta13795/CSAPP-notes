@@ -1,136 +1,42 @@
-/* 
- * CS:APP Data Lab 
- * 
- * <Rinta>
- * 
- * bits.c - Source file with your solutions to the Lab.
- *          This is the file you will hand in to your instructor.
- *
- * WARNING: Do not include the <stdio.h> header; it confuses the dlc
- * compiler. You can still use printf for debugging without including
- * <stdio.h>, although you might get a compiler warning. In general,
- * it's not good practice to ignore compiler warnings, but in this
- * case it's OK.  
- */
+
 
 #if 0
-/*
- * Instructions to Students:
- *
- * STEP 1: Read the following instructions carefully.
- */
+整数题规则（Integer Coding）
+✅ 只能用的操作：
 
-You will provide your solution to the Data Lab by
-editing the collection of functions in this source file.
+常量：0-255 (0xFF)
+一元运算：! ~
+二元运算：& ^ | + << >>
+局部变量和函数参数
 
-INTEGER CODING RULES:(integer coding rules)
- 
-  Replace the "return" statement in each function with one
-  or more lines of C code that implements the function. Your code 
-  must conform to the following style:
+❌ 禁止使用：
 
-  int Funct(arg1, arg2, ...) {
-      /* brief description of how your implementation works */
-      int var1 = Expr1;
-      ...
-      int varM = ExprM;
+控制流：if while for switch
+宏定义：#define
+其他运算：&& || - ?:
+类型转换、数组、结构体
+大常量（如 0xffffffff）
 
-      varJ = ExprJ;
-      ...
-      varN = ExprN;
-      return ExprR;
-  }
+⚠️ 重要假设：
 
-  Each "Expr" is an expression using ONLY the following:
-  1. Integer constants 0 through 255 (0xFF), inclusive. You are
-      not allowed to use big constants such as 0xffffffff.
-  2. Function arguments and local variables (no global variables).
-  3. Unary integer operations ! ~
-  4. Binary integer operations & ^ | + << >>
-    
-  Some of the problems restrict the set of allowed operators even further.
-  Each "Expr" may consist of multiple operators. You are not restricted to
-  one operator per line.
-
-  You are expressly forbidden to:
-  1. Use any control constructs such as if, do, while, for, switch, etc.
-  2. Define or use any macros.
-  3. Define any additional functions in this file.
-  4. Call any functions.
-  5. Use any other operations, such as &&, ||, -, or ?:
-  6. Use any form of casting.
-  7. Use any data type other than int.  This implies that you
-     cannot use arrays, structs, or unions.
-
- 
-  You may assume that your machine:
-  1. Uses 2s complement, 32-bit representations of integers.
-  2. Performs right shifts arithmetically.
-  3. Has unpredictable behavior when shifting if the shift amount
-     is less than 0 or greater than 31.
+32位补码表示
+右移是算术右移
+移位量必须在 0-31 之间
 
 
-EXAMPLES OF ACCEPTABLE CODING STYLE:
-  /*
-   * pow2plus1 - returns 2^x + 1, where 0 <= x <= 31
-   */
-  int pow2plus1(int x) {
-     /* exploit ability of shifts to compute powers of 2 */
-     return (1 << x) + 1;
-  }
+浮点数题规则（Floating Point Coding）
+✅ 可以用：
 
-  /*
-   * pow2plus4 - returns 2^x + 4, where 0 <= x <= 31
-   */
-  int pow2plus4(int x) {
-     /* exploit ability of shifts to compute powers of 2 */
-     int result = (1 << x);
-     result += 4;
-     return result;
-  }
+if while for 等控制流
+int 和 unsigned 类型
+任意整数常量
+算术/逻辑/比较运算
 
-FLOATING POINT CODING RULES(float point)
+❌ 禁止使用：
 
-For the problems that require you to implement floating-point operations,
-the coding rules are less strict.  You are allowed to use looping and
-conditional control.  You are allowed to use both ints and unsigneds.
-You can use arbitrary integer and unsigned constants. You can use any arithmetic,
-logical, or comparison operations on int or unsigned data.
-
-You are expressly forbidden to:
-  1. Define or use any macros.
-  2. Define any additional functions in this file.
-  3. Call any functions.
-  4. Use any form of casting.
-  5. Use any data type other than int or unsigned.  This means that you
-     cannot use arrays, structs, or unions.
-  6. Use any floating point data types, operations, or constants.
-
-
-NOTES:
-  1. Use the dlc (data lab checker) compiler (described in the handout) to 
-     check the legality of your solutions.
-  2. Each function has a maximum number of operations (integer, logical,
-     or comparison) that you are allowed to use for your implementation
-     of the function.  The max operator count is checked by dlc.
-     Note that assignment ('=') is not counted; you may use as many of
-     these as you want without penalty.
-  3. Use the btest test harness to check your functions for correctness.
-  4. Use the BDD checker to formally verify your functions
-  5. The maximum number of ops for each function is given in the
-     header comment for each function. If there are any inconsistencies 
-     between the maximum ops in the writeup and in this file, consider
-     this file the authoritative source.(最大数量的operator使用)
-
-/*
- * STEP 2: Modify the following functions according the coding rules.
- * 
- *   IMPORTANT. TO AVOID GRADING SURPRISES:
- *   1. Use the dlc compiler to check that your solutions conform
- *      to the coding rules.
- *   2. Use the BDD checker to formally verify that your solutions produce 
- *      the correct answers.
- */
+浮点类型 float double
+类型转换
+数组、结构体
 
 
 #endif
@@ -180,21 +86,20 @@ int tmin(void) {
  *   Rating: 1
  */
 int isTmax(int x) {
-  return (!((~(x+1))^x))&(!!(x+1));//这个&理解成且的意识就可以，不要听Claude说的那些公式
+  return (!((~(x+1))^x))&(!!(x+1));
 }//
 /*
-用
+验证Tmax方式：
 TMax+1=TMin
-(a^a)=0
-!(a^a)=1
+TMax^TMin=-1
+
 ! 是逻辑非：
 !0 = 1
 !任何非零值 = 0
 
-2.
 ~(x+1) == x 这个性质，满足的只有 Tmax 和 -1 两个值
-
 ~(x+1) == x 等价于!(~(x+1)^x)
+!!(x+1)用于排除-1
 /* 
  * allOddBits - return 1 if all odd-numbered bits in word set to 1
  *   where bits are numbered from 0 (least significant) to 31 (most significant)
@@ -210,11 +115,14 @@ int allOddBits(int x) {
   return !(mask^(x&mask));
 }
 /*
+
 1
 规则里说的是不能用大常数（超过255的），但可以用变量  
-2
+2判断2数是否相等:
+!(x^y)
+3
 思路：
-奇数位全为1，就是x和掩码 0xAAAAAAAA 做&后还是 0xAAAAAAAA
+构造y=0xAAAAAAA，与x进行&仍是y，则x奇数位全是1
 */
 /* 
  * negate - return -x 
@@ -246,8 +154,8 @@ x+y=0
  */
 int isAsciiDigit(int x) {
   int m=x>>4;
-  int s1=!((m|0)^0x03);//为1
-  int s2=(x>>3)&1;//可能为0，1，大多是0
+  int s1=!(m^0x03);//为1，判断高位0x03
+  int s2=(x>>3)&1;//可能为0，1，大多是0(&1取符号)
   //为0:一组
   int first=!s2;
   //为1:
@@ -268,8 +176,23 @@ int isAsciiDigit(int x) {
     int a = x + (~0x30 + 1);  // x - 0x30，>=0说明x>=0x30
     int b = 0x39 + (~x + 1);  // 0x39 - x，>=0说明x<=0x39
     return !(a>>31) & !(b>>31);
-}
+}很妙
 
+
+发现的技巧：
+### 💡 巧妙的掩码设计：`0x6`
+
+判断低4位是否为 8 或 9：
+```c
+int temp = !((0x6) & x);
+```
+
+**原理**：
+- `0x6 = 0110` 只检查 bit2 和 bit1
+- `8 = 1000`, `9 = 1001` 的 bit2、bit1 都是 0
+- `A-F` 的 bit2 或 bit1 至少有一个是 1
+
+🎯 **精准过滤**：忽略 bit0，只看关键位！
 */
 /* 
  * conditional - same as x ? y : z 
@@ -311,9 +234,9 @@ int isLessOrEqual(int x, int y) {
   //相同符号
   // int s=x-y;改成：
   int s=x+(~y+1);
-  int one=(!diffsign)&(((s>>31)&1)|!s);
+  int one=(!diffsign)&(((s>>31)&1)|!s);//同符号&<=条件
   //不同符号
-  int two=(diffsign)&signx;
+  int two=(diffsign)&signx;//不同符号&x是否为负
   return one|two;
 }
 /*
@@ -333,7 +256,7 @@ x,y同符号以及x,y不同符号
  */
 int logicalNeg(int x) {
   int neg=~x+1;
-  int s=((neg|x)>>31)&1;//要加上&1,保证逻辑右移和算数右移都是对的
+  int s=((neg|x)>>31)&1;//&1来取符号
   return s^1;
 }
 /*
@@ -363,8 +286,8 @@ int howManyBits(int x) {
   x = x ^ sign;          // 负数翻转，正数不变
   //二分法————找最高位(定义是：左边高位的一堆0不算（那些是填充位），从最高的1开始，到最低位（这是有效数值部分）)，最后加上符号位
   int result=0;//数值部分位数(0到31的)
-  //16位
-  int sum16=!!(x>>16);//说明16位到31位至少有1————>至少16个数
+  //16位————筛查16位
+  int sum16=!!(x>>16);
   result+=sum16<<4;
   x>>=(sum16<<4);
   //8位
@@ -383,7 +306,7 @@ int howManyBits(int x) {
   int sum1=!!(x>>1);
   result+=sum1<<0;
   x>>=(sum1<<0);
-  //加最后一位
+  //最后只剩下bit0位
   result+=x;
   //加上符号位
   result+=1;
@@ -407,6 +330,30 @@ x = x ^ sign;          // 负数翻转，正数不变
 
 )
 )
+
+
+### 💡 两种"二分"的区别
+
+**传统二分**：取**索引**的一半
+- `mid = (left + right) / 2`
+- 找某个**位置**的值
+- 原因：数组支持 `arr[索引]` 访问
+
+
+**位的二分**：取**数量**的一半  
+- `x >> (位数/2)`
+- 检查某个**范围**有没有1
+- 原因：整数只支持 `>>` 移位操作
+
+🎯 **本质**：数据结构的访问方式不同，决定了分割方法不同
+
+### 💡 howManyBits 核心思路
+
+1. **翻转**：负数 XOR 全1 → 变正数（统一处理）
+2. **二分**：对数值二分，找最高位的1（数值宽度）
+3. **+1**：补码需要额外的符号位
+
+🎯 二分统计数值部分，符号位单独加
 */
 //float
 /* 

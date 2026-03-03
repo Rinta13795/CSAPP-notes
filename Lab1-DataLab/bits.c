@@ -283,27 +283,29 @@ int logicalNeg(int x) {
  //这题超级难，要反复复习
 int howManyBits(int x) {
   int sign = x >> 31;    // 提取符号
+  int result;
+  int sum16, sum8, sum4, sum2, sum1;//定义全放开头
   x = x ^ sign;          // 负数翻转，正数不变
   //二分法————找最高位(定义是：左边高位的一堆0不算（那些是填充位），从最高的1开始，到最低位（这是有效数值部分）)，最后加上符号位
-  int result=0;//数值部分位数(0到31的)
+  result=0;//数值部分位数(0到31的)
   //16位————筛查16位
-  int sum16=!!(x>>16);
+  sum16=!!(x>>16);
   result+=sum16<<4;
   x>>=(sum16<<4);
   //8位
-  int sum8=!!(x>>8);
+  sum8=!!(x>>8);
   result+=sum8<<3;
   x>>=(sum8<<3);
   //4位
-  int sum4=!!(x>>4);
+  sum4=!!(x>>4);
   result+=sum4<<2;
   x>>=(sum4<<2);
   //2位
-  int sum2=!!(x>>2);
+  sum2=!!(x>>2);
   result+=sum2<<1;
   x>>=(sum2<<1);
   //1位(只剩0位，1位了)
-  int sum1=!!(x>>1);
+  sum1=!!(x>>1);
   result+=sum1<<0;
   x>>=(sum1<<0);
   //最后只剩下bit0位
@@ -397,6 +399,9 @@ int floatFloat2Int(unsigned uf) {
   unsigned exp=(uf>>23)&0xFF;
   unsigned s=(uf>>31)&1;
   unsigned frac=uf&0x7FFFFF;
+  int mark;
+  unsigned sum;
+  int value=0;//忘记定义了！！！导致结果随便给
   if(exp==0xFF){
     return 0x80000000u;
   }
@@ -405,15 +410,15 @@ int floatFloat2Int(unsigned uf) {
     return 0;
   }
   //规格数不会写啊，差的就是不会表达浮点数
-  int E=exp-127;//为什么要E，指数？
+  mark=exp-127;//为什么要E，指数？
   //有效值去小数点
-  unsigned sum=frac|1<<23;
+  sum=frac|1<<23;
   //太小
-  if(E<0){
+  if(mark<0){
     return 0;
   }
   //溢出,因为是unsigned
-  if(E>=31){
+  if(mark>=31){
     return 0x80000000u;
   }
   /*
@@ -424,19 +429,20 @@ int floatFloat2Int(unsigned uf) {
   */
   //浮点数数值
   // int value=sum*(2^(E-23));错误，c语言，^不能表示幂运算！！！！！！只能移位数，移位要分类
-  int value=0;//忘记定义了！！！导致结果随便给
-  if(E>23){
-    value=sum<<(E-23);
+  
+  if(mark>23){
+    value=sum<<(mark-23);
   }
   else
   {
-    value=sum>>(23-E);
+    value=sum>>(23-mark);
   }
   if (s) {
         value = -value;
     }
   return value;
 }
+
 /* 
  * floatPower2 - Return bit-level equivalent of the expression 2.0^x
  *   (2.0 raised to the power x) for any 32-bit integer x.
@@ -451,10 +457,52 @@ int floatFloat2Int(unsigned uf) {
  *   Rating: 4
  */
 unsigned floatPower2(int x) {
+    //E指数
+    //最大：127
+    //最小；-126
+  if(x<-149){
+    return 0;
+  }
+  if(x>127){
+    return 0x7F800000;
+  }
+  if(x<=-126){
+    return (1<<23)>>(~(x+126)+1);
+    //
+    /*
+**思路**：
+- 先构造 bit23
+- 右移 `-(x+126)` 位到目标位置
 
+**例子**：
+- x=-127: 右移1位 → bit22 ✅
+- x=-149: 右移23位 → bit0 ✅  
+    */
+    //可以简化成1<<(149-x);
+    
+  }
+  else{
+    return (x+127)<<23;
+  }
 }
 
 /*
+value = 0.frac × 2^(-126)
+        ↑         ↑
+     23位尾数   固定指数
 
+frac = 000...001 (只有bit0=1)
+
+value = 0.000...001 × 2^(-126)
+      = 2^(-23) × 2^(-126)
+      = 2^(-149)  ✅
+
+重点：
+
+情况范围处理方式
+太小     x < -149          返回 0 
+太大     x > 127           返回 +INF (0x7F800000)
+非规格化  -149 ≤ x ≤ -127   E=0, 设置 frac 的某一位
+规格化   -126 ≤ x ≤ 127     E=x+127, frac=0
 
  */

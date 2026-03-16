@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "916feb74f67815ad",
+        "id": "5d520d17f6dfeeba",
         "type": "tabs",
         "children": [
           {
-            "id": "ddb3dfa2ca2d7411",
+            "id": "f6054605bc0731ed",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CSAPP-note2.md",
+                "file": "Claude记忆插件.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CSAPP-note2"
-            }
-          },
-          {
-            "id": "5c7829571f11a443",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CSAPP-note2.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "CSAPP-note2"
+              "title": "Claude记忆插件"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -93,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 221.5
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "dbbb8024c4b09354",
@@ -198,21 +184,29 @@
       "bases:新建数据库": false
     }
   },
-  "active": "5c7829571f11a443",
+  "active": "f6054605bc0731ed",
   "lastOpenFiles": [
-    "images/img_2602242113.png",
-    "images/img_2602242103.png",
-    "images/img_2602242047-1.png",
-    "images/img_2602242047.png",
-    "未命名.md",
+    "claude_sync_monitor.py",
+    "未命名 1.canvas",
+    "未命名",
+    "Claude记忆插件.md",
+    "CSAPP.md",
+    "2026-03-14.md",
+    "未命名.canvas",
+    "CSAPP-note3.md",
     "CSAPP-note2.md",
-    "images/img_2602241841.png",
-    "images/img_2602241830.png",
-    "images/img_2602241828.png",
-    "images/img_2602241812-1.png",
-    "images/img_2602241812.png",
-    "images/img_2602241800.png",
-    "images/img_2602241759.png",
+    "images/img_2603121650.png",
+    "images/img_2603121649.png",
+    "images/img_2603121638.png",
+    "images/img_2603121630.png",
+    "images/img_2603121628.png",
+    "images/img_2603111422.png",
+    "images/img_2603111421.png",
+    "images/img_2603111159.png",
+    "images/IMG_B3E93D50BFDF-1.jpeg",
+    "images/img_2603111155-1.png",
+    "Lab1：Data Lab.md",
+    "未命名.md",
     "minimind-notes/example-notes/NOTE_UPDATE_GUIDE.md",
     "minimind-notes/example-notes/learning_materials/why_normalization.py",
     "minimind-notes/example-notes/learning_materials/rope_why_multi_frequency.py",
@@ -223,7 +217,6 @@
     "minimind-notes/example-notes/learning_materials/normalization_comparison.py",
     "minimind-notes/example-notes/learning_materials/feedforward_explained.py",
     "minimind-notes/example-notes/learning_materials/attention_qkv_explained.py",
-    "minimind-notes/example-notes/learning_materials/attention_explained.py",
     "minimind-notes/example-notes/learning_materials/README.md",
     "minimind-notes/example-notes/notes.md",
     "minimind-notes/example-notes/learning_log.md",
@@ -241,11 +234,6 @@
     "minimind-notes/modules/01-foundation/03-attention/README.md",
     "minimind-notes/modules/01-foundation/02-position-encoding/teaching.md",
     "minimind-notes/modules/01-foundation/02-position-encoding/quiz.md",
-    "minimind-notes/modules/01-foundation/02-position-encoding/index.md",
-    "minimind-notes/modules/01-foundation/02-position-encoding/code_guide.md",
-    "minimind-notes/modules/01-foundation/02-position-encoding/README.md",
-    "minimind-notes/modules/01-foundation/01-normalization/teaching.md",
-    "minimind-notes/modules/01-foundation/01-normalization/quiz.md",
     "canvas/未命名.canvas",
     "canvas/未命名 4.canvas",
     "canvas/未命名 3.canvas",
@@ -253,8 +241,6 @@
     "canvas/未命名 1.canvas",
     "未命名 4.canvas",
     "未命名 3.canvas",
-    "未命名 2.canvas",
-    "未命名 1.canvas",
-    "未命名.canvas"
+    "未命名 2.canvas"
   ]
 }

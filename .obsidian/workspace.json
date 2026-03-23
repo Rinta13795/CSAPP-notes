@@ -39,21 +39,32 @@
             "id": "fa2785b256940022",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "未命名.canvas",
-                "viewState": {
-                  "x": 0,
-                  "y": 0,
-                  "zoom": 0
-                }
+                "file": "未命名/未命名.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
+              "icon": "lucide-file",
               "title": "未命名"
+            }
+          },
+          {
+            "id": "879dca988ebab3e1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "LangChain学习.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "LangChain学习"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -215,9 +226,17 @@
       "bases:新建数据库": false
     }
   },
-  "active": "fa2785b256940022",
+  "active": "879dca988ebab3e1",
   "lastOpenFiles": [
+    "随机知识.md",
+    "未命名 3.canvas",
+    "未命名 2.canvas",
+    "未命名/未命名.md",
+    "Claude记忆插件.md",
+    "开发小tips.canvas",
     "LangChain学习.md",
+    "2026-02-20.md",
+    "未命名.canvas",
     "Agent学习.md",
     "CSAPP-note3.md",
     "images/2024深入理解计算机系统 2.jpeg",
@@ -225,9 +244,6 @@
     "images/img_2603182109.png",
     "未命名 4.canvas",
     "2026-03-17.md",
-    "未命名 3.canvas",
-    "未命名 2.canvas",
-    "Claude记忆插件.md",
     "Lab1-DataLab/tests.c",
     "Lab1-DataLab/ishow.c",
     "Lab1-DataLab/ishow",
@@ -238,9 +254,7 @@
     "Lab1-DataLab/decl.c",
     "Lab1-DataLab/btest.h",
     "Lab1-DataLab/btest.c",
-    "未命名 1.canvas",
     "2026-03-14.md",
-    "未命名.canvas",
     "CSAPP-note2.md",
     "images/img_2603121650.png",
     "images/img_2603121649.png",
@@ -251,7 +265,6 @@
     "images/img_2603111421.png",
     "images/img_2603111159.png",
     "Lab1：Data Lab.md",
-    "未命名.md",
     "minimind-notes/example-notes/NOTE_UPDATE_GUIDE.md",
     "minimind-notes/example-notes/learning_materials/README.md",
     "minimind-notes/example-notes/notes.md",
@@ -265,9 +278,6 @@
     "minimind-notes/modules/01-foundation/04-feedforward/README.md",
     "minimind-notes/modules/01-foundation/03-attention/teaching.md",
     "minimind-notes/modules/01-foundation/03-attention/quiz.md",
-    "minimind-notes/modules/01-foundation/03-attention/index.md",
-    "minimind-notes/modules/01-foundation/03-attention/code_guide.md",
-    "minimind-notes/modules/01-foundation/03-attention/README.md",
     "canvas/未命名.canvas",
     "canvas/未命名 4.canvas",
     "canvas/未命名 3.canvas",
